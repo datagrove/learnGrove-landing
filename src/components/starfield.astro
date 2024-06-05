@@ -55,6 +55,7 @@
   const stars = Array.from({ length: COUNT }, () => new Star(0, 0, 0));
   let rafId = 0;
 
+  document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.querySelector(
     "#starfield-canvas",
   ) as HTMLCanvasElement;
@@ -102,4 +103,5 @@
     ctx.fillRect(-width / 2, -height / 2, width, height);
     rafId = requestAnimationFrame(frame);
   }
+});
 </script>
