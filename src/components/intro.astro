@@ -1,18 +1,23 @@
 ---
+import { Image } from "astro:assets";
+import logo from "~/assets/LearnGroveLogo.svg";
 import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 ---
 
-<ContentSection title="Just ship less" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="size-32" />
+<ContentSection title="LearnGrove, Growing Connections" id="intro">
+  <Image
+        src={logo}
+        alt="LearnGrove Logo - a circle with a tree in the middle"
+      />
   <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
+    LearnGrove is a community marketplace for educational resources. LearnGrove will serve as a
+    <span class="text-primary">comprehensive</span> hub where creators can share - and learners can discover - tailored educational resources.
+    <span class="text-primary">Bridging</span>
+    the gap between the creator and learners <span class="text-primary">enhancing</span> access to high-quality educational content while fostering a thriving <span class="text-primary">community</span> of learners and educators.
   </Fragment>
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
+    <!-- <a
       href="https://docs.astro.build/"
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
@@ -25,6 +30,6 @@ import ContentSection from "~/components/content-section.astro";
     >
       <Icon name="mdi:rocket" class="size-8" />
       <span>Try it out</span>
-    </a>
+    </a> -->
   </div>
 </ContentSection>

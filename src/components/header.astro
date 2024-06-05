@@ -3,11 +3,11 @@ import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
-const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
-];
+// const navItems: Array<NavItem> = [
+//   { title: "Features", url: "#features" },
+//   { title: "Compatibility", url: "#compatibility" },
+//   { title: "Showcase", url: "#showcase" },
+// ];
 ---
 
 <header
@@ -15,14 +15,14 @@ const navItems: Array<NavItem> = [
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="size-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <h1 class="sr-only">LearnGrove</h1>
+    <!-- <Icon name="logomark" class="size-10" />
+    <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
   </a>
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
+        <!-- <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
               <li>
@@ -32,7 +32,7 @@ const navItems: Array<NavItem> = [
               </li>
             ))
           }
-        </ul>
+        </ul> -->
       </nav>
       <button
         id="open-nav-button"
@@ -61,7 +61,7 @@ const navItems: Array<NavItem> = [
             <Icon name="logomark" class="size-16" />
           </div>
           <nav>
-            <ul class="flex flex-col">
+            <!-- <ul class="flex flex-col">
               {
                 navItems.map(({ title, url }) => (
                   <li>
@@ -71,7 +71,7 @@ const navItems: Array<NavItem> = [
                   </li>
                 ))
               }
-            </ul>
+            </ul> -->
           </nav>
         </div>
       </div>

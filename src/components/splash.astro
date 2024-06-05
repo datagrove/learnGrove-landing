@@ -1,10 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import GitHubCorner from "./github-corner.astro";
+import { Image } from "astro:assets";
+import logo from "~/assets/LearnGroveLogo.svg";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -13,23 +13,20 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 <section class="relative h-full bg-black">
   <Starfield />
   <GitHubCorner />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2">
-    <h2
-      class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="size-20 text-white md:size-32" />
+  <div class="relative grid h-full place-items-center">
+    <h2 class="flex flex-col items-center gap-2 sm:gap-4 sm:self-auto">
+      <Image
+        src={logo}
+        alt="LearnGrove Logo - a circle with a tree in the middle"
+      />
       <div
         class="gradient-text text-center font-extrabold tracking-tighter text-6xl md:text-8xl"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        LearnGrove,
+        <br /> Coming Soon
       </div>
     </h2>
-    <div
+    <!-- <div
       id="astronaut"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
@@ -40,8 +37,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         sizes={sizes}
         loading="eager"
         alt="A floating astronaut in a space suit"
-      />
-    </div>
+      /> -->
   </div>
 </section>
 
